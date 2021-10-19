@@ -1,0 +1,49 @@
+# Exemple de dades a afagir
+
+dn: cn=Anna Pou,ou=usuaris,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: Anna Pou
+cn: Anita Pou
+sn: Pou
+homephone: 555-222-2222
+mail: anna@edt.org
+description: Watch out for this girl
+ou: Alumnes
+uid: anna
+uidNumber: 5002
+gidNumber: 600
+homeDirectory: /tmp/home/anna
+userPassword: {SSHA}Bm4B3Bu/fuH6Bby9lgxfFAwLYrK0RbOq
+
+dn: cn=Jordi Mas,ou=usuaris,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: Jordi Mas
+cn: Giorgios Mas
+sn: Mas
+homephone: 555-222-2224
+mail: jordi@edt.org
+description: Watch out for this girl
+ou: Alumnes
+ou: Profes
+uid: jordi
+uidNumber: 5004
+gidNumber: 100
+homeDirectory: /tmp/home/jordi
+userPassword: {SSHA}T5jrMgpJwZZgu0azkLIVoYhiG08/KGUv
+
+#ldapadd -x -h 172.17.0.2 -D "cn=Manager,dc=edt,dc=org" -w secret -f afagir.ldif
+
+dn: cn=koman al-carrer,ou=usuaris,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: koman al-carrer
+sn: koman
+uid: koman
+uidNumber: 777777
+gidNumber: 777777
+homeDirectory: /tmp/home/koeman
+
+#ldapadd -x -c -h 172.17.0.2 -D "cn=Manager,dc=edt,dc=org" -w secret -f afagir.ldif
+
